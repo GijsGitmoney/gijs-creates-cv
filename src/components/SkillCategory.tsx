@@ -36,18 +36,18 @@ const SkillCategory = ({ icon: Icon, title, skills, color = "primary" }: SkillCa
         </h3>
       </div>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {skills.map((skill, index) => (
           <div 
             key={index}
             className="group relative"
           >
-            <div className="flex items-center gap-3 p-4 bg-secondary/30 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105">
-              <div className={`w-3 h-3 rounded-full ${
+            <div className="flex items-center gap-3 p-3 bg-secondary/30 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105 min-h-[3rem]">
+              <div className={`w-3 h-3 rounded-full flex-shrink-0 ${
                 color === 'accent' ? 'bg-accent' : 
                 color === 'success' ? 'bg-success' : 'bg-primary'
               }`} />
-              <span className="text-foreground font-medium text-sm">{skill.name}</span>
+              <span className="text-foreground font-medium text-sm leading-tight break-words">{skill.name}</span>
             </div>
             {skill.category && (
               <div className="absolute -top-2 -right-2 bg-muted text-muted-foreground text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
