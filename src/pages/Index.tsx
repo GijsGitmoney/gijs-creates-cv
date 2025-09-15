@@ -71,8 +71,8 @@ const Index = () => {
                 type="stage"
                 title="Afstudeerstage - Marketing Research"
                 company="Turien & Co."
-                period="2023"
-                description="Onderzoek naar klantretentie en klanttevredenheid. Ontwikkeling van strategieën ter verbetering van klantloyaliteit. Afgerond met een 7,5."
+                period="Januari 2024 - September 2024"
+                description="Afstudeeronderzoek naar klantretentie en klanttevredenheid. Ontwikkeling van strategieën ter verbetering van klantloyaliteit. Afgerond met een 7,5."
                 skills={["Klantretentie Onderzoek", "Customer Satisfaction", "Data Analyse", "Strategic Recommendations"]}
               />
               

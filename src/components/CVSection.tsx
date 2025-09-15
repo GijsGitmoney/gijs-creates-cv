@@ -54,7 +54,7 @@ const CVSection = ({
             : 'max-h-none opacity-100'
         }`}
       >
-        <div className="pl-18 space-y-6">
+        <div className="pl-4 md:pl-18 space-y-6">
           {children}
         </div>
       </div>

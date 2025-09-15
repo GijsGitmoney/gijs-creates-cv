@@ -5,7 +5,7 @@ const hobbies = [
   {
     icon: Dumbbell,
     title: "Fitness & Sport",
-    description: "Krachttraining, hardlopen en kickboksen (6 maanden ervaring)"
+    description: "Krachttraining, hardlopen en kickboksen (half jaar ervaring)"
   },
   {
     icon: Plane,
@@ -19,8 +19,8 @@ const hobbies = [
   },
   {
     icon: Music,
-    title: "Festivals & Muziek",
-    description: "Muziekliefhebber en regelmatige festivalganger"
+    title: "Lezen & Ontwikkeling",
+    description: "Passie voor lezen en continue persoonlijke ontwikkeling"
   },
   {
     icon: Users,
