@@ -17,23 +17,37 @@ const SkillCategory = ({ icon: Icon, title, skills, color = "primary" }: SkillCa
   const getColorClasses = () => {
     switch (color) {
       case 'accent':
-        return 'text-accent bg-accent/10';
+        return 'text-accent bg-accent/20 border-accent/30';
       case 'success':
-        return 'text-success bg-success/10';
+        return 'text-success bg-success/20 border-success/30';
       default:
-        return 'text-primary bg-primary/10';
+        return 'text-primary bg-primary/20 border-primary/30';
+    }
+  };
+
+  const getDotColor = () => {
+    switch (color) {
+      case 'accent':
+        return 'bg-accent shadow-accent';
+      case 'success':
+        return 'bg-success shadow-[0_0_20px_rgba(0,255,255,0.5)]';
+      default:
+        return 'bg-primary shadow-glow';
     }
   };
 
   return (
     <CVCard>
-      <div className="flex items-center gap-3 mb-4">
-        <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${getColorClasses()}`}>
-          <Icon className="w-5 h-5" />
+      <div className="flex items-center gap-4 mb-6">
+        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${getColorClasses()} backdrop-blur-sm`}>
+          <Icon className="w-7 h-7" />
         </div>
-        <h3 className="text-lg font-heading font-semibold text-foreground">
-          {title}
-        </h3>
+        <div>
+          <h3 className="text-2xl font-heading font-bold gradient-text">
+            {title}
+          </h3>
+          <div className={`h-1 w-16 rounded-full mt-1 ${color === 'accent' ? 'bg-accent' : color === 'success' ? 'bg-success' : 'bg-primary'}`}></div>
+        </div>
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -42,12 +56,12 @@ const SkillCategory = ({ icon: Icon, title, skills, color = "primary" }: SkillCa
             key={index}
             className="group relative"
           >
-            <div className="flex items-center gap-3 p-3 bg-secondary/30 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105 min-h-[3rem]">
-              <div className={`w-3 h-3 rounded-full flex-shrink-0 ${
-                color === 'accent' ? 'bg-accent' : 
-                color === 'success' ? 'bg-success' : 'bg-primary'
-              }`} />
-              <span className="text-foreground font-medium text-sm leading-tight break-words">{skill.name}</span>
+            <div className="group/skill relative">
+              <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl opacity-0 group-hover/skill:opacity-40 transition-opacity duration-300 blur-sm"></div>
+              <div className="relative flex items-center gap-4 p-4 bg-muted/40 backdrop-blur-sm rounded-xl border border-border/30 hover:border-primary/50 transition-all duration-300 hover:scale-105 min-h-[4rem] group-hover/skill:bg-card/50">
+                <div className={`w-4 h-4 rounded-full flex-shrink-0 ${getDotColor()} animate-pulse`} />
+                <span className="text-foreground font-medium text-sm leading-tight break-words group-hover/skill:text-primary transition-colors">{skill.name}</span>
+              </div>
             </div>
             {skill.category && (
               <div className="absolute -top-2 -right-2 bg-muted text-muted-foreground text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
