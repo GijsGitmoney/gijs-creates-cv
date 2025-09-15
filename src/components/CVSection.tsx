@@ -60,10 +60,10 @@ const CVSection = ({
       </div>
       
       <div 
-        className={`overflow-hidden transition-all duration-500 ease-out ${
+        className={`transition-all duration-500 ease-out ${
           collapsible && !isOpen 
-            ? 'max-h-0 opacity-0' 
-            : 'max-h-none opacity-100'
+            ? 'max-h-0 opacity-0 overflow-hidden' 
+            : 'max-h-none opacity-100 overflow-visible'
         }`}
       >
         <div className="pl-4 md:pl-22 space-y-8">

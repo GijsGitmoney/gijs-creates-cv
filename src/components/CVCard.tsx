@@ -10,7 +10,7 @@ const CVCard = ({ children, className = "", hover = true }: CVCardProps) => {
   return (
     <div className="group relative">
       {/* Gradient Border */}
-      <div className="absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
+      <div className="pointer-events-none absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
       
       {/* Main Card */}
       <div 
@@ -22,7 +22,7 @@ const CVCard = ({ children, className = "", hover = true }: CVCardProps) => {
         `}
       >
         {/* Inner glow effect */}
-        <div className="absolute inset-0 bg-gradient-glass rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-glass rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         {/* Content */}
         <div className="relative z-10">
