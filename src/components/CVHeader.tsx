@@ -21,12 +21,12 @@ const CVHeader = () => {
         {/* Main Title */}
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-primary/30">
-              <Sparkles className="w-6 h-6 text-primary animate-glow" />
+            <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center backdrop-blur-sm border border-primary/30 animate-glow">
+              <Sparkles className="w-6 h-6 text-primary" />
             </div>
             <span className="text-primary font-tech text-lg tracking-wider">PORTFOLIO 2024</span>
-            <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center backdrop-blur-sm border border-accent/30">
-              <Sparkles className="w-6 h-6 text-accent animate-glow" style={{animationDelay: '1s'}} />
+            <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center backdrop-blur-sm border border-accent/30 animate-glow" style={{animationDelay: '1s'}}>
+              <Sparkles className="w-6 h-6 text-accent" />
             </div>
           </div>
           
