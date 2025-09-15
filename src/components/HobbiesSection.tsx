@@ -49,7 +49,7 @@ const HobbiesSection = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-4">
         {hobbies.map((hobby, index) => {
           const Icon = hobby.icon;
           return (
@@ -63,8 +63,8 @@ const HobbiesSection = () => {
                   <Icon className="w-6 h-6" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="font-bold text-foreground mb-2 leading-tight break-words text-lg group-hover/hobby:text-primary transition-colors">{hobby.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed break-words">{hobby.description}</p>
+                  <h4 className="font-bold text-foreground mb-2 leading-tight break-normal text-lg group-hover/hobby:text-primary transition-colors">{hobby.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed break-normal">{hobby.description}</p>
                 </div>
               </div>
             </div>
