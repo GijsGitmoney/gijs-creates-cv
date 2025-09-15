@@ -17,20 +17,20 @@ import StartupHighlight from "../components/StartupHighlight";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <CVHeader />
       
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-7xl mx-auto px-6 py-16">
         {/* Startup Highlight - Featured Section */}
-        <section className="mb-16">
+        <section className="mb-20 animate-fade-in">
           <StartupHighlight />
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-16">
           {/* Left Column - Main Content */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="xl:col-span-2 space-y-16">
             {/* Werkervaring */}
-            <CVSection icon={BriefcaseIcon} title="Werkervaring">
+            <CVSection icon={BriefcaseIcon} title="Werkervaring" collapsible defaultOpen>
               <ExperienceItem
                 title="Verkoopmedewerker"
                 company="Groenhart Alkmaar"
@@ -57,14 +57,23 @@ const Index = () => {
             </CVSection>
 
             {/* Opleiding */}
-            <CVSection icon={GraduationCap} title="Opleiding">
+            <CVSection icon={GraduationCap} title="Opleiding" collapsible defaultOpen>
               <ExperienceItem
                 type="education"
                 title="Bachelor Business Studies, richting Marketing"
                 company="Hogeschool Inholland Alkmaar"
                 period="2020 - Heden"
-                description="Afstudeerstage bij Turien & Co. met onderzoek naar klantretentie en klanttevredenheid. Afgerond met een 7,5."
-                skills={["Marketing Strategy", "Klantretentie Onderzoek", "Data Analyse", "Customer Experience"]}
+                description="Specialisatie in marketing met focus op klantretentie en customer experience. Uitgebreide kennis van data-analyse en marketingstrategieën."
+                skills={["Marketing Strategy", "Customer Experience", "Data Analyse", "Onderzoeksmethodologie"]}
+              />
+              
+              <ExperienceItem
+                type="stage"
+                title="Afstudeerstage - Marketing Research"
+                company="Turien & Co."
+                period="2023"
+                description="Onderzoek naar klantretentie en klanttevredenheid. Ontwikkeling van strategieën ter verbetering van klantloyaliteit. Afgerond met een 7,5."
+                skills={["Klantretentie Onderzoek", "Customer Satisfaction", "Data Analyse", "Strategic Recommendations"]}
               />
               
               <ExperienceItem
@@ -87,7 +96,7 @@ const Index = () => {
             </CVSection>
 
             {/* Stages */}
-            <CVSection icon={Award} title="Stages & Praktijkervaring">
+            <CVSection icon={Award} title="Stages & Praktijkervaring" collapsible>
               <ExperienceItem
                 type="stage"
                 title="Stagiair Marketing"
@@ -118,19 +127,21 @@ const Index = () => {
           </div>
 
           {/* Right Column - Skills & Personal */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {/* Marketing Skills */}
             <SkillCategory
               icon={Monitor}
               title="Marketing & Technology"
               skills={[
-                { name: "Mailchimp", level: 85 },
-                { name: "Coosto", level: 80 },
-                { name: "SEO", level: 75 },
-                { name: "Social Media Marketing", level: 90 },
-                { name: "Canva", level: 95 },
-                { name: "Photoshop", level: 80 },
-                { name: "UX/UI Design", level: 85 }
+                { name: "Mailchimp", category: "Email Marketing" },
+                { name: "Coosto", category: "Social Media" },
+                { name: "SEO", category: "Digital Marketing" },
+                { name: "Social Media Marketing", category: "Strategy" },
+                { name: "Canva", category: "Design Tools" },
+                { name: "Photoshop", category: "Design Tools" },
+                { name: "UX/UI Design", category: "Product Design" },
+                { name: "Campaign Development", category: "Strategy" },
+                { name: "Content Creation", category: "Marketing" }
               ]}
               color="primary"
             />
@@ -140,11 +151,12 @@ const Index = () => {
               icon={Star}
               title="Data & Analyse"
               skills={[
-                { name: "Tableau", level: 75 },
-                { name: "IBM SPSS", level: 70 },
-                { name: "MS Excel", level: 90 },
-                { name: "SAP", level: 65 },
-                { name: "Klantretentie Onderzoek", level: 85 }
+                { name: "Tableau", category: "Visualization" },
+                { name: "IBM SPSS", category: "Statistics" },
+                { name: "MS Excel", category: "Data Analysis" },
+                { name: "SAP", category: "Enterprise" },
+                { name: "Klantretentie Onderzoek", category: "Research" },
+                { name: "Customer Analytics", category: "CX" }
               ]}
               color="accent"
             />

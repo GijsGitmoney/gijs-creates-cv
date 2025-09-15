@@ -5,32 +5,32 @@ const hobbies = [
   {
     icon: Dumbbell,
     title: "Fitness & Sport",
-    description: "Krachttraining, hardlopen, 6 maanden kickboksen"
+    description: "Krachttraining, hardlopen en kickboksen (6 maanden ervaring)"
   },
   {
     icon: Plane,
-    title: "Reizen",
-    description: "Houdt van reizen en de wereld ontdekken"
+    title: "Reizen & Ontdekken",
+    description: "Passie voor reizen en de wereld verkennen - altijd op zoek naar nieuwe culturen"
   },
   {
     icon: Mountain,
     title: "Skiën",
-    description: "Grote passie voor wintersport en ski vakanties"
+    description: "Grote passie voor wintersport en ski vakanties in de Alpen"
   },
   {
     icon: Music,
-    title: "Festivals",
-    description: "Muziekliefhebber en festivalganger"
+    title: "Festivals & Muziek",
+    description: "Muziekliefhebber en regelmatige festivalganger"
   },
   {
     icon: Users,
-    title: "Sociaal",
-    description: "Sociaal persoon die graag met anderen samenwerkt"
+    title: "Sociaal & Netwerken",
+    description: "Sociaal persoon die graag met anderen samenwerkt en connecties opbouwt"
   },
   {
     icon: Target,
-    title: "Uitdagingen",
-    description: "Altijd op zoek naar nieuwe uitdagingen en groei"
+    title: "Persoonlijke Groei",
+    description: "Altijd op zoek naar nieuwe uitdagingen en continue zelfverbetering"
   }
 ];
 

@@ -3,7 +3,7 @@ import CVCard from "./CVCard";
 
 interface Skill {
   name: string;
-  level: number;
+  category?: string;
 }
 
 interface SkillCategoryProps {
@@ -36,22 +36,24 @@ const SkillCategory = ({ icon: Icon, title, skills, color = "primary" }: SkillCa
         </h3>
       </div>
       
-      <div className="space-y-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {skills.map((skill, index) => (
-          <div key={index}>
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-foreground font-medium">{skill.name}</span>
-              <span className="text-muted-foreground text-sm">{skill.level}%</span>
+          <div 
+            key={index}
+            className="group relative"
+          >
+            <div className="flex items-center gap-3 p-4 bg-secondary/30 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className={`w-3 h-3 rounded-full ${
+                color === 'accent' ? 'bg-accent' : 
+                color === 'success' ? 'bg-success' : 'bg-primary'
+              }`} />
+              <span className="text-foreground font-medium text-sm">{skill.name}</span>
             </div>
-            <div className="w-full bg-secondary rounded-full h-2">
-              <div 
-                className={`h-2 rounded-full transition-all duration-700 ease-out ${
-                  color === 'accent' ? 'bg-accent' : 
-                  color === 'success' ? 'bg-success' : 'bg-primary'
-                }`}
-                style={{ width: `${skill.level}%` }}
-              />
-            </div>
+            {skill.category && (
+              <div className="absolute -top-2 -right-2 bg-muted text-muted-foreground text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                {skill.category}
+              </div>
+            )}
           </div>
         ))}
       </div>

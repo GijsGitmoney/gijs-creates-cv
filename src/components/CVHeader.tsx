@@ -3,29 +3,54 @@ import { Button } from "@/components/ui/button";
 
 const CVHeader = () => {
   return (
-    <header className="relative bg-gradient-hero text-white overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+    <header className="relative bg-gradient-hero text-white overflow-hidden min-h-screen flex items-center">
+      {/* Animated background particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float"></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-accent rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-success rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/3 right-20 w-1 h-1 bg-primary-light rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+      </div>
       
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+      {/* Glass morphism overlay */}
+      <div className="absolute inset-0 bg-gradient-glass backdrop-blur-sm"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Profile Info */}
-          <div className="lg:col-span-2">
-            <div className="mb-4">
-              <p className="text-accent-light text-lg font-medium mb-2">
+          <div className="animate-fade-in-up">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                <div className="w-2 h-2 bg-success rounded-full animate-glow"></div>
+                <span className="text-sm font-medium">Available for opportunities</span>
+              </div>
+              
+              <p className="text-accent-light text-xl font-medium mb-4 tracking-wide">
                 Marketing Professional & Ondernemer
               </p>
-              <h1 className="text-5xl lg:text-6xl font-heading font-bold mb-4">
-                Gijs Hamburger
+              <h1 className="text-6xl lg:text-7xl font-heading font-bold mb-6 tracking-tight">
+                Gijs <span className="text-gradient-accent">Hamburger</span>
               </h1>
-              <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mb-8">
                 Gedreven, creatief en ambitieus marketeer met passie voor design, technologie en klantbeleving. 
-                Altijd bezig met persoonlijke groei en het creëren van waardevolle ervaringen voor klanten.
+                Co-founder van AI-startup met focus op innovatieve oplossingen en gebruikerservaring.
               </p>
             </div>
             
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                <div className="text-2xl font-bold text-accent">4+</div>
+                <div className="text-white/70 text-sm">Jaar ervaring</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
+                <div className="text-2xl font-bold text-primary">1</div>
+                <div className="text-white/70 text-sm">Startup opgericht</div>
+              </div>
+            </div>
+            
             {/* Quick Info */}
-            <div className="flex flex-wrap gap-4 text-white/80">
+            <div className="flex flex-wrap gap-6 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>29 mei 2001</span>
@@ -37,45 +62,55 @@ const CVHeader = () => {
             </div>
           </div>
 
-          {/* Contact Card */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-            <h3 className="text-lg font-heading font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <a 
-                href="mailto:casilgijs@gmail.com" 
-                className="flex items-center gap-3 text-white/90 hover:text-white transition-colors group"
-              >
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Mail className="w-5 h-5" />
+          {/* Contact Card - Apple-style Glass */}
+          <div className="animate-scale-in" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gradient-glass backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-hover">
+              <h3 className="text-2xl font-heading font-semibold mb-6">Contact</h3>
+              <div className="space-y-4">
+                <a 
+                  href="mailto:casilgijs@gmail.com" 
+                  className="flex items-center gap-4 text-white/90 hover:text-white transition-all duration-300 group p-3 rounded-xl hover:bg-white/10"
+                >
+                  <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-glow">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Email</div>
+                    <div className="text-white/70 text-sm">casilgijs@gmail.com</div>
+                  </div>
+                </a>
+                
+                <a 
+                  href="tel:06-40494809" 
+                  className="flex items-center gap-4 text-white/90 hover:text-white transition-all duration-300 group p-3 rounded-xl hover:bg-white/10"
+                >
+                  <div className="w-12 h-12 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Telefoon</div>
+                    <div className="text-white/70 text-sm">06-40494809</div>
+                  </div>
+                </a>
+                
+                <div className="flex items-center gap-4 text-white/90 p-3">
+                  <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="font-medium">Locatie</div>
+                    <div className="text-white/70 text-sm">Dokter van Peltlaan 15<br />1861 KA Bergen</div>
+                  </div>
                 </div>
-                <span>casilgijs@gmail.com</span>
-              </a>
-              
-              <a 
-                href="tel:06-40494809" 
-                className="flex items-center gap-3 text-white/90 hover:text-white transition-colors group"
-              >
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <span>06-40494809</span>
-              </a>
-              
-              <div className="flex items-center gap-3 text-white/90">
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <span>Dokter van Peltlaan 15<br />1861 KA Bergen</span>
               </div>
-            </div>
-            
-            <div className="mt-6 pt-4 border-t border-white/20">
-              <Button 
-                variant="secondary" 
-                className="w-full bg-white/20 hover:bg-white/30 text-white border-white/30"
-              >
-                Download CV
-              </Button>
+              
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <Button 
+                  className="w-full bg-gradient-primary hover:bg-primary-dark text-white border-0 shadow-glow hover:shadow-hover transition-all duration-300 h-12 text-lg font-medium"
+                >
+                  Download CV
+                </Button>
+              </div>
             </div>
           </div>
         </div>
