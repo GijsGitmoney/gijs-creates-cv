@@ -1,4 +1,4 @@
-import { Dumbbell, Plane, Mountain, Music, Users, Target } from "lucide-react";
+import { Dumbbell, Plane, Mountain, Book, Users, Target } from "lucide-react";
 import CVCard from "./CVCard";
 
 const hobbies = [
@@ -18,7 +18,7 @@ const hobbies = [
     description: "Grote passie voor wintersport en ski vakanties in de Alpen"
   },
   {
-    icon: Music,
+    icon: Book,
     title: "Lezen & Ontwikkeling",
     description: "Passie voor lezen en continue persoonlijke ontwikkeling"
   },
