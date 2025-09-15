@@ -99,6 +99,14 @@ const Index = () => {
             <CVSection icon={Award} title="Stages & Praktijkervaring" collapsible>
               <ExperienceItem
                 type="stage"
+                title="Afstudeerstage - Marketing Research"
+                company="Turien & Co."
+                period="Januari 2024 - September 2024"
+                description="Afstudeeronderzoek naar klantretentie en klanttevredenheid. Ontwikkeling van strategieën ter verbetering van klantloyaliteit. Afgerond met een 7,5."
+                skills={["Klantretentie Onderzoek", "Customer Satisfaction", "Data Analyse", "Strategic Recommendations"]}
+              />
+              <ExperienceItem
+                type="stage"
                 title="Stagiair Marketing"
                 company="Ferney Group"
                 period="September 2022 - Januari 2023"
