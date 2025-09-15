@@ -47,14 +47,14 @@ const HobbiesSection = () => {
           return (
             <div 
               key={index}
-              className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg hover:bg-secondary transition-colors"
+              className="w-full flex items-start gap-3 p-4 bg-secondary/50 rounded-lg hover:bg-secondary transition-colors"
             >
               <div className="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center flex-shrink-0">
                 <Icon className="w-5 h-5" />
               </div>
-              <div>
-                <h4 className="font-medium text-foreground mb-1">{hobby.title}</h4>
-                <p className="text-sm text-muted-foreground">{hobby.description}</p>
+              <div className="min-w-0">
+                <h4 className="font-medium text-foreground mb-1 leading-tight break-words">{hobby.title}</h4>
+                <p className="text-sm text-muted-foreground leading-snug break-words hyphens-auto">{hobby.description}</p>
               </div>
             </div>
           );

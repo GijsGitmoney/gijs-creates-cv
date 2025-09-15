@@ -10,8 +10,8 @@ const CVCard = ({ children, className = "", hover = true }: CVCardProps) => {
   return (
     <div 
       className={`
-        bg-gradient-glass backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-card transition-all duration-500 ease-out overflow-hidden
-        ${hover ? 'hover:shadow-hover hover:bg-card-hover hover:scale-105' : ''}
+        bg-gradient-glass backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-card transition-all duration-500 ease-out
+        ${hover ? 'hover:shadow-hover hover:bg-card-hover md:hover:scale-[1.02] will-change-transform' : ''}
         ${className}
       `}
     >
