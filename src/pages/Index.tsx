@@ -68,15 +68,6 @@ const Index = () => {
               />
               
               <ExperienceItem
-                type="stage"
-                title="Afstudeerstage - Marketing Research"
-                company="Turien & Co."
-                period="Januari 2024 - September 2024"
-                description="Afstudeeronderzoek naar klantretentie en klanttevredenheid. Ontwikkeling van strategieën ter verbetering van klantloyaliteit. Afgerond met een 7,5."
-                skills={["Klantretentie Onderzoek", "Customer Satisfaction", "Data Analyse", "Strategic Recommendations"]}
-              />
-              
-              <ExperienceItem
                 type="education"
                 title="Vestigingsmanager Groothandel niveau 4"
                 company="Horizon College Heerhugowaard"
