@@ -1,0 +1,126 @@
+import { Building, Rocket, Target, Calendar, MapPin } from "lucide-react";
+import CVCard from "./CVCard";
+
+const experiences = [
+  {
+    title: "Co-Founder",
+    company: "Revalyze.io",
+    period: "2024 - Heden",
+    location: "Amsterdam",
+    description: "AI-agent voor data-analyse ontwikkeld. Lead design van website, dashboard UX/UI en email templates. Van concept tot werkend product in 6 maanden.",
+    skills: ["AI Development", "UX/UI Design", "Product Strategy", "Entrepreneurship"],
+    type: "startup",
+    icon: Rocket,
+    highlight: true
+  },
+  {
+    title: "Afstudeerstage",
+    company: "Turien & Co.",
+    period: "Feb 2024 - Jun 2024",
+    location: "Haarlem",
+    description: "Onderzoek naar klantretentie en klanttevredenheid. Analyse van klantgedrag en ontwikkeling van strategieën voor verbeterde klantbinding. Afgerond met een 7,5.",
+    skills: ["Klantonderzoek", "SPSS", "Data-analyse", "Rapportage"],
+    type: "work",
+    icon: Target
+  },
+  {
+    title: "Marketing Stagiair",
+    company: "Ferney Group",
+    period: "Sep 2023 - Jan 2024",
+    location: "Amsterdam",
+    description: "Ondersteuning bij marketingcampagnes, nieuwsbrieven, social media content en SEO optimalisatie. Verantwoordelijk voor volledige content calendar.",
+    skills: ["Social Media", "SEO", "Content Marketing", "Nieuwsbrieven"],
+    type: "internship",
+    icon: Building
+  }
+];
+
+const ExperienceTimeline = () => {
+  return (
+    <section className="animate-fade-in">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-heading font-bold gradient-text mb-4">
+          Ervaring & Ondernemerschap
+        </h2>
+        <p className="text-lg text-muted-foreground">Van stage tot startup - mijn professionele journey</p>
+      </div>
+      
+      <div className="relative">
+        {/* Timeline Line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full"></div>
+        
+        <div className="space-y-12">
+          {experiences.map((exp, index) => {
+            const Icon = exp.icon;
+            const isLeft = index % 2 === 0;
+            
+            return (
+              <div key={index} className={`flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'} relative`}>
+                {/* Timeline Node */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-glow ${
+                    exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-secondary'
+                  }`}>
+                    <Icon className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                </div>
+                
+                {/* Content Card */}
+                <div className={`w-5/12 ${isLeft ? 'pr-8' : 'pl-8'}`}>
+                  <CVCard className={exp.highlight ? 'border-primary/50' : ''}>
+                    <div className="mb-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl font-heading font-bold text-foreground">
+                          {exp.title}
+                        </h3>
+                        {exp.highlight && (
+                          <span className="px-3 py-1 bg-primary text-primary-foreground rounded-full text-sm font-medium">
+                            Startup
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-lg font-semibold text-primary mb-3">
+                        {exp.company}
+                      </p>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm">{exp.period}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        <span className="text-sm">{exp.location}</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-foreground leading-relaxed mb-4">
+                      {exp.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, skillIndex) => (
+                        <span 
+                          key={skillIndex}
+                          className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </CVCard>
+                </div>
+                
+                {/* Spacer */}
+                <div className="w-5/12"></div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceTimeline;
