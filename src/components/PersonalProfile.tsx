@@ -21,7 +21,7 @@ const PersonalProfile = () => {
           <p className="text-lg leading-relaxed text-foreground mb-6">
             <span className="text-primary font-semibold">Gedreven marketeer</span> met oog voor design en klantbeleving. 
             Van klantretentie-onderzoek bij <span className="font-medium">Turien & Co.</span> tot het bouwen van mijn eigen 
-            <span className="text-accent font-semibold"> AI-startup Revalyze.io</span>.
+            <span className="text-accent font-semibold"> AI-startup Revalyze.io</span> met mijn beste vriend.
           </p>
           
           <p className="text-lg leading-relaxed text-muted-foreground">

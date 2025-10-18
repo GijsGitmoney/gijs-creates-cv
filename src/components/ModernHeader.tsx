@@ -59,7 +59,7 @@ const ModernHeader = () => {
             <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
               <MapPin className="w-6 h-6 text-primary mb-2" />
               <p className="text-sm text-muted-foreground">Locatie</p>
-              <p className="text-sm font-medium">Amsterdam, NL</p>
+              <p className="text-sm font-medium">Bergen, Noord-Holland</p>
             </div>
           </div>
           
@@ -68,7 +68,7 @@ const ModernHeader = () => {
             <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
               <Linkedin className="w-6 h-6 text-primary mb-2" />
               <p className="text-sm text-muted-foreground">LinkedIn</p>
-              <p className="text-sm font-medium">gijs-hamburger</p>
+              <p className="text-sm font-medium">Gijs Hamburger</p>
             </div>
           </div>
         </div>

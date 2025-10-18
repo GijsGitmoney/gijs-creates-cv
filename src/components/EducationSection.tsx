@@ -7,7 +7,7 @@ const education = [
     institution: "Hogeschool Inholland",
     level: "HBO",
     period: "2020 - 2024",
-    location: "Haarlem",
+    location: "Alkmaar",
     description: "Specialisatie in marketing strategieën, klantgedrag en ondernemerschap. Afstudeerstage afgerond met 7,5.",
     highlights: ["Marketing Strategieën", "Klantonderzoek", "Business Development", "Ondernemerschap"]
   },
@@ -15,8 +15,8 @@ const education = [
     title: "Vestigingsmanager Groothandel",
     institution: "Horizon College",
     level: "MBO4",
-    period: "2018 - 2020",
-    location: "Hoorn",
+    period: "2017 - 2020",
+    location: "Heerhugowaard",
     description: "Focus op retail management, logistiek en commerciële processen in de groothandel.",
     highlights: ["Retail Management", "Logistiek", "Commercieel", "Klantenservice"]
   },
@@ -24,8 +24,8 @@ const education = [
     title: "VMBO Theoretische Leerweg",
     institution: "PCC Fabritius",
     level: "VMBO-TL",
-    period: "2014 - 2018",
-    location: "Hoorn",
+    period: "2013 - 2017",
+    location: "Alkmaar",
     description: "Theoretische leerweg met focus op economie en commerciële vakken.",
     highlights: ["Economie", "Commercieel", "Communicatie", "Wiskunde"]
   }

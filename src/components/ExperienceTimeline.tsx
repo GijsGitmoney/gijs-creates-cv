@@ -5,8 +5,8 @@ const experiences = [
   {
     title: "Co-Founder",
     company: "Revalyze.io",
-    period: "2024 - Heden",
-    location: "Amsterdam",
+    period: "Mei 2024 - Heden",
+    location: "",
     description: "AI-agent voor data-analyse ontwikkeld. Lead design van website, dashboard UX/UI en email templates. Van concept tot werkend product in 6 maanden.",
     skills: ["AI Development", "UX/UI Design", "Product Strategy", "Entrepreneurship"],
     type: "startup",
@@ -16,8 +16,8 @@ const experiences = [
   {
     title: "Afstudeerstage",
     company: "Turien & Co.",
-    period: "Feb 2024 - Jun 2024",
-    location: "Haarlem",
+    period: "Jan 2024 - Aug 2024",
+    location: "Alkmaar",
     description: "Onderzoek naar klantretentie en klanttevredenheid. Analyse van klantgedrag en ontwikkeling van strategieën voor verbeterde klantbinding. Afgerond met een 7,5.",
     skills: ["Klantonderzoek", "SPSS", "Data-analyse", "Rapportage"],
     type: "work",
@@ -26,8 +26,8 @@ const experiences = [
   {
     title: "Marketing Stagiair",
     company: "Ferney Group",
-    period: "Sep 2023 - Jan 2024",
-    location: "Amsterdam",
+    period: "Sep 2022 - Jan 2023",
+    location: "Heerhugowaard",
     description: "Ondersteuning bij marketingcampagnes, nieuwsbrieven, social media content en SEO optimalisatie. Verantwoordelijk voor volledige content calendar.",
     skills: ["Social Media", "SEO", "Content Marketing", "Nieuwsbrieven"],
     type: "internship",
@@ -89,10 +89,12 @@ const ExperienceTimeline = () => {
                         <Calendar className="w-4 h-4" />
                         <span className="text-sm">{exp.period}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{exp.location}</span>
-                      </div>
+                      {exp.location && (
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{exp.location}</span>
+                        </div>
+                      )}
                     </div>
                     
                     <p className="text-foreground leading-relaxed mb-4">

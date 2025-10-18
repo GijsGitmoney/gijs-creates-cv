@@ -1,6 +1,5 @@
-import { Star, Palette, BarChart3, Code, Zap } from "lucide-react";
+import { Star, Palette, BarChart3, Code } from "lucide-react";
 import CVCard from "./CVCard";
-import { Progress } from "./ui/progress";
 
 const skillCategories = [
   {
@@ -8,12 +7,12 @@ const skillCategories = [
     icon: Star,
     color: "primary",
     skills: [
-      { name: "SEO & SEM", level: 85 },
-      { name: "Content Marketing", level: 90 },
-      { name: "Social Media Marketing", level: 88 },
-      { name: "Email Marketing", level: 82 },
-      { name: "Brand Strategy", level: 78 },
-      { name: "Market Research", level: 92 }
+      { name: "SEO & SEM" },
+      { name: "Content Marketing" },
+      { name: "Social Media Marketing" },
+      { name: "Email Marketing" },
+      { name: "Brand Strategy" },
+      { name: "Market Research" }
     ]
   },
   {
@@ -21,11 +20,11 @@ const skillCategories = [
     icon: Palette,
     color: "secondary",
     skills: [
-      { name: "UX/UI Design", level: 85 },
-      { name: "Photoshop", level: 80 },
-      { name: "Canva", level: 95 },
-      { name: "Web Design", level: 75 },
-      { name: "Graphic Design", level: 82 }
+      { name: "UX/UI Design" },
+      { name: "Photoshop" },
+      { name: "Canva" },
+      { name: "Web Design" },
+      { name: "Graphic Design" }
     ]
   },
   {
@@ -33,11 +32,11 @@ const skillCategories = [
     icon: BarChart3,
     color: "accent",
     skills: [
-      { name: "SPSS", level: 88 },
-      { name: "Tableau", level: 75 },
-      { name: "Google Analytics", level: 85 },
-      { name: "Excel Advanced", level: 90 },
-      { name: "Data Visualization", level: 80 }
+      { name: "SPSS" },
+      { name: "Tableau" },
+      { name: "Google Analytics" },
+      { name: "Excel" },
+      { name: "Data Visualization" }
     ]
   },
   {
@@ -45,11 +44,9 @@ const skillCategories = [
     icon: Code,
     color: "success",
     skills: [
-      { name: "HTML/CSS", level: 70 },
-      { name: "WordPress", level: 85 },
-      { name: "Mailchimp", level: 88 },
-      { name: "HubSpot", level: 75 },
-      { name: "SAP", level: 65 }
+      { name: "Mailchimp" },
+      { name: "HubSpot" },
+      { name: "SAP" }
     ]
   }
 ];
@@ -82,18 +79,13 @@ const ModernSkills = () => {
                 </div>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-foreground font-medium group-hover:text-primary transition-colors">
-                        {skill.name}
-                      </span>
-                      <span className="text-muted-foreground text-sm font-medium">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <Progress value={skill.level} className="h-2" />
+                  <div key={skillIndex} className="group flex items-center gap-3">
+                    <div className={`w-2 h-2 rounded-full bg-${category.color}`}></div>
+                    <span className="text-foreground font-medium group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
