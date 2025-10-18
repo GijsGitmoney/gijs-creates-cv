@@ -63,15 +63,15 @@ const CallToAction = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="text-center">
                 <p className="text-muted-foreground">Email</p>
-                <p className="font-medium text-foreground">gijs@revalyze.io</p>
+                <p className="font-medium text-foreground">casilgijs@gmail.com</p>
               </div>
               <div className="text-center">
                 <p className="text-muted-foreground">Telefoon</p>
-                <p className="font-medium text-foreground">+31 6 12345678</p>
+                <p className="font-medium text-foreground">+31 6 40494809</p>
               </div>
               <div className="text-center">
                 <p className="text-muted-foreground">Locatie</p>
-                <p className="font-medium text-foreground">Amsterdam, Nederland</p>
+                <p className="font-medium text-foreground">Bergen, Noord-Holland</p>
               </div>
             </div>
           </div>
