@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Co-Founder",
     company: "Revalyze.io",
-    period: "Mei 2024 - Heden",
+    period: "Mei 2025 - Heden",
     location: "",
     description: "AI-agent voor data-analyse ontwikkeld. Lead design van website, dashboard UX/UI en email templates. Van concept tot werkend product in 6 maanden.",
     skills: ["AI Development", "UX/UI Design", "Product Strategy", "Entrepreneurship"],
