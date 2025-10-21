@@ -29,7 +29,7 @@ const PersonalProfile = () => {
           </p>
           
           <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-            Ik combineer <span className="text-primary">creativiteit</span>, <span className="text-secondary">data</span> en 
+            Ik combineer <span className="text-primary">creativiteit</span>, <span className="text-primary">data</span> en 
             <span className="text-accent"> ondernemerschap</span> om impact te maken. Met ervaring in marketing research, 
             UX/UI design en startup development, breng ik zowel strategisch inzicht als hands-on execution naar elk project.
           </p>
