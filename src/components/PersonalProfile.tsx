@@ -18,6 +18,10 @@ const PersonalProfile = () => {
         </div>
         
         <div className="prose prose-lg max-w-none">
+          <p className="text-sm text-muted-foreground mb-6">
+            Geboren op 29 mei 2001 in Utrecht en opgegroeid in Bergen (N-H)
+          </p>
+          
           <p className="text-lg leading-relaxed text-foreground mb-6">
             <span className="text-primary font-semibold">Gedreven marketeer</span> met oog voor design en klantbeleving. 
             Van klantretentie-onderzoek bij <span className="font-medium">Turien & Co.</span> tot het bouwen van mijn eigen 

@@ -5,22 +5,27 @@ const hobbies = [
   {
     icon: Dumbbell,
     title: "Fitness & Sport",
-    description: "Krachttraining 5x per week, hardlopen en kickboksen voor mentale en fysieke balans"
+    description: "5x per week krachttraining, wekelijks hardlopen en een half jaar gekickbokst - fitness is een essentieel onderdeel van mijn levensstijl"
   },
   {
     icon: Mountain,
-    title: "Skiën & Outdoor",
-    description: "Grote passie voor wintersport en ski vakanties in de Alpen"
+    title: "Skiën & Wintersport",
+    description: "Elk jaar op wintersport met de familie - een jaarlijkse traditie waar ik enorm van geniet"
   },
   {
     icon: Plane,
-    title: "Reizen & Festivals",
-    description: "Ontdekken van nieuwe culturen en muziekfestivals wereldwijd"
+    title: "Reizen & Culturen",
+    description: "Passie voor reizen met grote interesse in geschiedenis en andere culturen"
   },
   {
     icon: Book,
-    title: "Lezen & Ontwikkeling",
-    description: "Continue persoonlijke groei door boeken en online courses"
+    title: "Lezen & Groei",
+    description: "Dagelijks lezen voor continue persoonlijke ontwikkeling"
+  },
+  {
+    icon: Users,
+    title: "Sociale Momenten",
+    description: "Gezellig uit eten of naar de film met vrienden - kwaliteitstijd met mensen om me heen"
   }
 ];
 
