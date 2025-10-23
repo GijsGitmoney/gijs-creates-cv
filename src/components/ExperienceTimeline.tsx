@@ -38,75 +38,66 @@ const experiences = [
 const ExperienceTimeline = () => {
   return (
     <section className="animate-fade-in">
-      <div className="text-center mb-8 md:mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-3 md:mb-4">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-heading font-bold gradient-text mb-4">
           Ervaring & Ondernemerschap
         </h2>
-        <p className="text-base md:text-lg text-muted-foreground">Van stage tot startup - mijn professionele journey</p>
+        <p className="text-lg text-muted-foreground">Van stage tot startup - mijn professionele journey</p>
       </div>
       
       <div className="relative">
-        {/* Timeline Line - Hidden on mobile, vertical line on desktop */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full"></div>
+        {/* Timeline Line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full"></div>
         
-        <div className="space-y-8 md:space-y-12">
+        <div className="space-y-12">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             const isLeft = index % 2 === 0;
             
             return (
-              <div key={index} className={`flex items-center md:${isLeft ? 'flex-row' : 'flex-row-reverse'} relative`}>
+              <div key={index} className={`flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'} relative`}>
                 {/* Timeline Node */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-glow ${
-                    exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-secondary'
+                    exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-primary'
                   }`}>
                     <Icon className="w-8 h-8 text-primary-foreground" />
                   </div>
                 </div>
                 
                 {/* Content Card */}
-                <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
+                <div className={`w-5/12 ${isLeft ? 'pr-8' : 'pl-8'}`}>
                   <CVCard className={exp.highlight ? 'border-primary/50' : ''}>
-                    {/* Mobile Icon */}
-                    <div className="md:hidden mb-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center shadow-glow ${
-                        exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-secondary'
-                      }`}>
-                        <Icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-                    
                     <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2 gap-2">
-                        <h3 className="text-lg md:text-xl font-heading font-bold text-foreground">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl font-heading font-bold text-foreground">
                           {exp.title}
                         </h3>
                         {exp.highlight && (
-                          <span className="px-2 md:px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs md:text-sm font-medium whitespace-nowrap">
+                          <span className="px-3 py-1 bg-primary text-primary-foreground rounded-full text-sm font-medium">
                             Startup
                           </span>
                         )}
                       </div>
-                      <p className="text-base md:text-lg font-semibold text-primary mb-3">
+                      <p className="text-lg font-semibold text-primary mb-3">
                         {exp.company}
                       </p>
                     </div>
                     
-                    <div className="flex flex-wrap gap-3 md:gap-4 text-muted-foreground mb-4">
+                    <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 flex-shrink-0" />
-                        <span className="text-xs md:text-sm">{exp.period}</span>
+                        <Calendar className="w-4 h-4" />
+                        <span className="text-sm">{exp.period}</span>
                       </div>
                       {exp.location && (
                         <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 flex-shrink-0" />
-                          <span className="text-xs md:text-sm">{exp.location}</span>
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{exp.location}</span>
                         </div>
                       )}
                     </div>
                     
-                    <p className="text-sm md:text-base text-foreground leading-relaxed mb-4">
+                    <p className="text-foreground leading-relaxed mb-4">
                       {exp.description}
                     </p>
                     
@@ -114,7 +105,7 @@ const ExperienceTimeline = () => {
                       {exp.skills.map((skill, skillIndex) => (
                         <span 
                           key={skillIndex}
-                          className="px-2 md:px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs md:text-sm font-medium"
+                          className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-medium"
                         >
                           {skill}
                         </span>
@@ -123,8 +114,8 @@ const ExperienceTimeline = () => {
                   </CVCard>
                 </div>
                 
-                {/* Spacer - Hidden on mobile */}
-                <div className="hidden md:block w-5/12"></div>
+                {/* Spacer */}
+                <div className="w-5/12"></div>
               </div>
             );
           })}
