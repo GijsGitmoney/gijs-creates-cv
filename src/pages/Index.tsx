@@ -11,7 +11,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <ModernHeader />
       
-      <main className="container mx-auto px-4 py-12 space-y-20">
+      <main className="container mx-auto px-4 md:px-6 py-8 md:py-12 space-y-12 md:space-y-20">
         <PersonalProfile />
         <ExperienceTimeline />
         <ModernSkills />

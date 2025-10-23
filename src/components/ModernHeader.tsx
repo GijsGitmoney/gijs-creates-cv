@@ -25,62 +25,62 @@ const ModernHeader = () => {
         </div>
         
         {/* Name & Title */}
-        <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-heading font-black gradient-text mb-4 animate-fade-in">
+        <div className="mb-6 md:mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-heading font-black gradient-text mb-3 md:mb-4 animate-fade-in leading-tight">
             GIJS HAMBURGER
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-medium tracking-wide animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium tracking-wide animate-fade-in px-4" style={{ animationDelay: '0.2s' }}>
             Creatief Marketeer & Co-founder Revalyze.io
           </p>
         </div>
         
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12 animate-fade-in px-2" style={{ animationDelay: '0.4s' }}>
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
-            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
-              <Mail className="w-6 h-6 text-primary mb-2" />
-              <p className="text-sm text-muted-foreground">Email</p>
-              <p className="text-sm font-medium">casilgijs@gmail.com</p>
+            <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
+            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
+              <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
+              <p className="text-xs md:text-sm text-muted-foreground">Email</p>
+              <p className="text-xs md:text-sm font-medium break-all">casilgijs@gmail.com</p>
             </div>
           </div>
           
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
-            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
-              <Phone className="w-6 h-6 text-primary mb-2" />
-              <p className="text-sm text-muted-foreground">Telefoon</p>
-              <p className="text-sm font-medium">+31 6 40494809</p>
+            <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
+            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
+              <Phone className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
+              <p className="text-xs md:text-sm text-muted-foreground">Telefoon</p>
+              <p className="text-xs md:text-sm font-medium">+31 6 40494809</p>
             </div>
           </div>
           
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
-            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
-              <MapPin className="w-6 h-6 text-primary mb-2" />
-              <p className="text-sm text-muted-foreground">Locatie</p>
-              <p className="text-sm font-medium">Bergen, Noord-Holland</p>
+            <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
+            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
+              <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
+              <p className="text-xs md:text-sm text-muted-foreground">Locatie</p>
+              <p className="text-xs md:text-sm font-medium">Bergen, Noord-Holland</p>
             </div>
           </div>
           
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-primary rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
-            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
-              <Linkedin className="w-6 h-6 text-primary mb-2" />
-              <p className="text-sm text-muted-foreground">LinkedIn</p>
-              <p className="text-sm font-medium">Gijs Hamburger</p>
+            <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
+            <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
+              <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
+              <p className="text-xs md:text-sm text-muted-foreground">LinkedIn</p>
+              <p className="text-xs md:text-sm font-medium">Gijs Hamburger</p>
             </div>
           </div>
         </div>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-2xl shadow-glow">
-            <ExternalLink className="w-5 h-5 mr-2" />
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl shadow-glow text-sm md:text-base w-full sm:w-auto">
+            <ExternalLink className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             View Portfolio
           </Button>
-          <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 font-semibold px-8 py-3 rounded-2xl">
-            <Mail className="w-5 h-5 mr-2" />
+          <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto">
+            <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Contact Me
           </Button>
         </div>
