@@ -5,7 +5,7 @@ const hobbies = [
   {
     icon: Dumbbell,
     title: "Fitness & Sport",
-    description: "5x per week krachttraining, wekelijks hardlopen en het afgelopen half jaar gekickbokst - fitness is een essentieel onderdeel van mijn levensstijl"
+    description: "5x per week krachttraining, wekelijks hardlopen en het afgelopen half jaar gekickbokst"
   },
   {
     icon: Mountain,
