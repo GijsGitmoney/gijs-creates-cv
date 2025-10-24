@@ -18,7 +18,7 @@ const CallToAction = () => {
               Klaar voor de volgende stap?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              "Altijd op zoek naar groei, creativiteit en impact."
+              Gedreven om mijn kennis en ervaring verder te ontwikkelen.
             </p>
           </div>
           
@@ -40,23 +40,6 @@ const CallToAction = () => {
             </Button>
           </div>
           
-          {/* QR Code Section */}
-          <div className="border-t border-border/50 pt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <div className="text-center sm:text-left">
-                <h3 className="font-semibold text-foreground mb-2">
-                  Scan voor interactieve CV
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Of bezoek: gijs-hamburger.com
-                </p>
-              </div>
-              
-              <div className="w-20 h-20 bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
-                <QrCode className="w-10 h-10 text-muted-foreground" />
-              </div>
-            </div>
-          </div>
           
           {/* Contact Info */}
           <div className="mt-8 pt-8 border-t border-border/50">
