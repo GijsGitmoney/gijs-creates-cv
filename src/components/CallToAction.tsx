@@ -31,9 +31,16 @@ const CallToAction = () => {
               Connect op LinkedIn
             </Button>
             
-            <Button variant="secondary" size="lg" className="font-semibold px-8 py-4 rounded-2xl group">
-              <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Download CV (PDF)
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="font-semibold px-8 py-4 rounded-2xl group"
+              asChild
+            >
+              <a href="/CV_Gijs_Hamburger_2025_Final.pdf" download>
+                <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Download CV (PDF)
+              </a>
             </Button>
           </div>
           

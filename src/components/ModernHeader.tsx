@@ -74,9 +74,16 @@ const ModernHeader = () => {
         </div>
         
         <div className="flex justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
-          <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto">
-            <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-            Download CV
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto"
+            asChild
+          >
+            <a href="/CV_Gijs_Hamburger_2025_Final.pdf" download>
+              <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+              Download CV
+            </a>
           </Button>
         </div>
       </div>
