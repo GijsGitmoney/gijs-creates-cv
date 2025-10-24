@@ -15,11 +15,8 @@ const CallToAction = () => {
         <div className="relative z-10">
           <div className="mb-8">
             <h2 className="text-3xl font-heading font-bold gradient-text mb-4">
-              Klaar voor de volgende stap?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Gedreven om mijn kennis en ervaring verder te ontwikkelen.
-            </p>
+            </h2>
           </div>
           
           {/* Action Buttons */}
