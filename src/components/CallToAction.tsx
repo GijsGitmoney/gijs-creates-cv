@@ -21,14 +21,27 @@ const CallToAction = () => {
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-2xl shadow-glow group">
-              <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Start een gesprek
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-2xl shadow-glow group"
+              asChild
+            >
+              <a href="mailto:casilgijs@gmail.com">
+                <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Start een gesprek
+              </a>
             </Button>
             
-            <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 font-semibold px-8 py-4 rounded-2xl group">
-              <Linkedin className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Connect op LinkedIn
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary/50 hover:bg-primary/10 font-semibold px-8 py-4 rounded-2xl group"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/gijs-hamburger-437379263/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Connect op LinkedIn
+              </a>
             </Button>
             
             <Button 

@@ -63,14 +63,19 @@ const ModernHeader = () => {
             </div>
           </div>
           
-          <div className="group relative">
+          <a 
+            href="https://www.linkedin.com/in/gijs-hamburger-437379263/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group relative block"
+          >
             <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
             <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
               <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
               <p className="text-xs md:text-sm text-muted-foreground">LinkedIn</p>
               <p className="text-xs md:text-sm font-medium">Gijs Hamburger</p>
             </div>
-          </div>
+          </a>
         </div>
         
         <div className="flex justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
