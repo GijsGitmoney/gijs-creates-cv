@@ -57,7 +57,7 @@ const ExperienceTimeline = () => {
             return (
               <div key={index} className={`flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'} relative`}>
                 {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-glow ${
                     exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-primary'
                   }`}>
