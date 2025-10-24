@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, ExternalLink, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const ModernHeader = () => {
@@ -73,15 +73,10 @@ const ModernHeader = () => {
           </div>
         </div>
         
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl shadow-glow text-sm md:text-base w-full sm:w-auto">
-            <ExternalLink className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-            View Portfolio
-          </Button>
+        <div className="flex justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
           <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto">
-            <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-            Contact Me
+            <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+            Download CV
           </Button>
         </div>
       </div>
