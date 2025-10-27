@@ -30,8 +30,8 @@ const hobbies = [
 ];
 
 const traits = [
-  "Ambitieus",
-  "Verantwoordelijk", 
+  "Leergierig",
+  "Verantwoordelijk",
   "Empathisch",
   "Geduldig",
   "Gedisciplineerd",
