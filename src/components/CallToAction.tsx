@@ -50,7 +50,7 @@ const CallToAction = () => {
               className="font-semibold px-8 py-4 rounded-2xl group"
               asChild
             >
-              <a href="/CV_Gijs_Hamburger_2025_Final.pdf" download>
+              <a href="/Gijs_Hamburger_CV_2025_1.pdf" download>
                 <Download className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Download CV (PDF)
               </a>
