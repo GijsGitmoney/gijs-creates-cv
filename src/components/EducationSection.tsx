@@ -27,7 +27,7 @@ const education = [
     period: "2013 - 2017",
     location: "Alkmaar",
     description: "Theoretische leerweg met focus op economie.",
-    highlights: ["Economie", "Communicatie", "Wiskunde"]
+    highlights: ["Economie", "Natuurkunde", "Wiskunde"]
   }
 ];
 
