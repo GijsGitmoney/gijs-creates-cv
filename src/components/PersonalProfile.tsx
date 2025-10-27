@@ -35,7 +35,7 @@ const PersonalProfile = () => {
           </p>
           
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Na mijn afstuderen besloot ik nog een halfjaar bij mijn bijbaan te blijven, waar ik met veel plezier met een hecht team van vrienden werkte, en heb ik daarnaast gereisd. Vervolgens heb ik mij volledig op Revalyze gericht, waarin ik veel tijd, creativiteit en energie heb gestoken. Nu het project tijdelijk op pauze staat omdat mijn compagnon aan zijn masteropleiding is begonnen, richt ik mij volledig op mijn professionele groei, verdere ontwikkeling en het starten van mijn carrière in marketing en AI.
+            Na mijn afstuderen besloot ik PARTTIME te werken bij mijn bijbaan, waar ik met veel plezier met een hecht team van vrienden en collega's werk. Daarnaast heb ik gereisd en mij volledig op Revalyze gericht, waarin ik veel tijd, creativiteit en energie heb gestoken. Nu het project tijdelijk op pauze staat omdat mijn compagnon aan zijn masteropleiding is begonnen, richt ik mij volledig op mijn professionele groei, verdere ontwikkeling en het starten van mijn carrière in marketing en AI.
           </p>
         </div>
       </CVCard>
