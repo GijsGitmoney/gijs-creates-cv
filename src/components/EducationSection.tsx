@@ -26,8 +26,8 @@ const education = [
     level: "VMBO-TL",
     period: "2013 - 2017",
     location: "Alkmaar",
-    description: "Theoretische leerweg met focus op economie en commerciële vakken.",
-    highlights: ["Economie", "Commercieel", "Communicatie", "Wiskunde"]
+    description: "Theoretische leerweg met focus op economie.",
+    highlights: ["Economie", "Communicatie", "Wiskunde"]
   }
 ];
 
