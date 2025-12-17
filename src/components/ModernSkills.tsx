@@ -6,7 +6,12 @@ const skillCategories = [
     title: "Marketing & Advertising",
     subtitle: "Focus op performance & data",
     icon: Target,
-    color: "primary",
+    colorClasses: {
+      bg: "bg-primary/20",
+      text: "text-primary",
+      border: "border-primary/30",
+      dot: "bg-primary"
+    },
     skills: [
       { name: "Google Ads (Search & Display)", description: "Campagnes opzetten, structureren en optimaliseren op basis van zoekintentie, biedstrategieën (o.a. Smart Bidding) en performance-inzichten." },
       { name: "Meta Advertising (Facebook & Instagram)", description: "Basiservaring met conversie- en leadcampagnes, creatives testen, targeting, en werken met Pixel & CAPI-concepten." },
@@ -19,7 +24,12 @@ const skillCategories = [
     title: "Design & Creative",
     subtitle: "Ondersteunend aan ads",
     icon: Palette,
-    color: "secondary",
+    colorClasses: {
+      bg: "bg-secondary/20",
+      text: "text-secondary",
+      border: "border-secondary/30",
+      dot: "bg-secondary"
+    },
     skills: [
       { name: "Canva (ads & social creatives)", description: "Ontwerpen en aanpassen van advertentievisuals voor Meta & Display." },
       { name: "Photoshop (basis)", description: "Bewerken en optimaliseren van visuals voor online campagnes." },
@@ -30,7 +40,12 @@ const skillCategories = [
     title: "Data & Analytics",
     subtitle: "Sterk punt voor deze rol",
     icon: BarChart3,
-    color: "accent",
+    colorClasses: {
+      bg: "bg-accent/20",
+      text: "text-accent",
+      border: "border-accent/30",
+      dot: "bg-accent"
+    },
     skills: [
       { name: "Google Analytics 4 (GA4)", description: "Events, conversies, rapportages en basis analyse van gebruikersgedrag." },
       { name: "Google Ads Measurement", description: "Inzicht in conversiemetingen, attributie en data-koppelingen." },
@@ -43,7 +58,12 @@ const skillCategories = [
     title: "Tech & Tools",
     subtitle: "Relevant voor digital advertising",
     icon: Wrench,
-    color: "success",
+    colorClasses: {
+      bg: "bg-success/20",
+      text: "text-success",
+      border: "border-success/30",
+      dot: "bg-success"
+    },
     skills: [
       { name: "Google Marketing Platform", description: "Google Ads, GA4, Tag Manager, Looker Studio (basis)." },
       { name: "Meta Business Manager", description: "Ads Manager, Pixel, catalogi (basiskennis & praktijkervaring)." },
@@ -80,7 +100,7 @@ const ModernSkills = () => {
           return (
             <CVCard key={index} className="md:hover:scale-[1.02] transition-all duration-500">
               <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
-                <div className={`w-10 h-10 md:w-12 md:h-12 bg-${category.color}/20 text-${category.color} rounded-lg md:rounded-xl flex items-center justify-center border border-${category.color}/30 flex-shrink-0`}>
+                <div className={`w-10 h-10 md:w-12 md:h-12 ${category.colorClasses.bg} ${category.colorClasses.text} rounded-lg md:rounded-xl flex items-center justify-center border ${category.colorClasses.border} flex-shrink-0`}>
                   <Icon className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div className="min-w-0">
@@ -95,7 +115,7 @@ const ModernSkills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="group">
                     <div className="flex items-start gap-2 md:gap-3">
-                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-${category.color} flex-shrink-0 mt-2`}></div>
+                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${category.colorClasses.dot} flex-shrink-0 mt-2`}></div>
                       <div>
                         <span className="text-sm md:text-base text-foreground font-medium group-hover:text-primary transition-colors">
                           {skill.name}
