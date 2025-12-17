@@ -93,7 +93,7 @@ const PersonalSection = () => {
         {/* Personality Traits */}
         <CVCard>
           <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-secondary rounded-lg md:rounded-xl flex items-center justify-center shadow-glow flex-shrink-0">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-lg md:rounded-xl flex items-center justify-center shadow-glow flex-shrink-0">
               <Target className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
             </div>
             <div className="min-w-0">
@@ -108,7 +108,7 @@ const PersonalSection = () => {
             {traits.map((trait, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 bg-success/10 rounded-lg border border-success/20 hover:bg-success/20 transition-colors group"
+                className="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 bg-success/20 rounded-lg border border-success/30 hover:bg-success/25 transition-colors group"
               >
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-success flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="text-sm md:text-base text-foreground font-medium">{trait}</span>

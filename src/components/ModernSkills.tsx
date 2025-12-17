@@ -25,10 +25,10 @@ const skillCategories = [
     subtitle: "Ondersteunend aan ads",
     icon: Palette,
     colorClasses: {
-      bg: "bg-secondary/20",
-      text: "text-secondary",
-      border: "border-secondary/30",
-      dot: "bg-secondary"
+      bg: "bg-accent/20",
+      text: "text-accent",
+      border: "border-accent/30",
+      dot: "bg-accent"
     },
     skills: [
       { name: "Canva (ads & social creatives)", description: "Ontwerpen en aanpassen van advertentievisuals voor Meta & Display." },
@@ -100,7 +100,7 @@ const ModernSkills = () => {
           return (
             <CVCard key={index} className="md:hover:scale-[1.02] transition-all duration-500">
               <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
-                <div className={`w-10 h-10 md:w-12 md:h-12 ${category.colorClasses.bg} ${category.colorClasses.text} rounded-lg md:rounded-xl flex items-center justify-center border ${category.colorClasses.border} flex-shrink-0`}>
+                <div className={`w-10 h-10 md:w-12 md:h-12 ${category.colorClasses.bg} ${category.colorClasses.text} rounded-lg md:rounded-xl flex items-center justify-center border ${category.colorClasses.border} flex-shrink-0 shadow-glow`}>
                   <Icon className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div className="min-w-0">
@@ -115,7 +115,7 @@ const ModernSkills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="group">
                     <div className="flex items-start gap-2 md:gap-3">
-                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${category.colorClasses.dot} flex-shrink-0 mt-2`}></div>
+                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${category.colorClasses.dot} shadow-glow flex-shrink-0 mt-2`}></div>
                       <div>
                         <span className="text-sm md:text-base text-foreground font-medium group-hover:text-primary transition-colors">
                           {skill.name}
