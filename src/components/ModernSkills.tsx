@@ -13,11 +13,9 @@ const skillCategories = [
       dot: "bg-primary"
     },
     skills: [
-      { name: "Google Ads (Search & Display)", description: "Campagnes opzetten, structureren en optimaliseren op basis van zoekintentie, biedstrategieën (o.a. Smart Bidding) en performance-inzichten." },
-      { name: "Meta Advertising (Facebook & Instagram)", description: "Basiservaring met conversie- en leadcampagnes, creatives testen, targeting, en werken met Pixel & CAPI-concepten." },
-      { name: "Performance Marketing & Funnels", description: "Conversiegericht denken: van advertentie → landingspagina → meetbare actie." },
-      { name: "Content & Creatives voor Ads", description: "Meedenken over hooks, formats en creatieve invalshoeken voor social advertenties." },
-      { name: "Basis SEO & zoekgedrag", description: "Inzicht in zoekwoorden, zoekintentie en de rol van SEO binnen het bredere marketinglandschap." }
+      { name: "Google Ads (Search & Display – basis)", description: "Opzetten en analyseren van campagnes binnen Google Ads. Inzicht in zoekintentie, keywords, advertentieteksten, biedstrategieën (o.a. Smart Bidding) en basisoptimalisaties." },
+      { name: "Meta Advertising (Facebook & Instagram – basis)", description: "Kennismaking met het opzetten van campagnes binnen Meta Ads Manager. Basiskennis van doelstellingen, creatives, targeting en campagne-structuur. Ervaring vooral op leer- en testniveau." },
+      { name: "Performance marketing mindset", description: "Denken vanuit doelen en data: begrijpen hoe advertenties bijdragen aan zichtbaarheid, verkeer en conversies, en hoe resultaten geïnterpreteerd kunnen worden." }
     ]
   },
   {
@@ -47,11 +45,10 @@ const skillCategories = [
       dot: "bg-accent"
     },
     skills: [
-      { name: "Google Analytics 4 (GA4)", description: "Events, conversies, rapportages en basis analyse van gebruikersgedrag." },
-      { name: "Google Ads Measurement", description: "Inzicht in conversiemetingen, attributie en data-koppelingen." },
-      { name: "Google Tag Manager (basis)", description: "Begrip van tags, events en tracking-structuur (implementatie in samenwerking met developers)." },
-      { name: "Excel / data-analyse", description: "Rapportages, analyses en inzichten vertalen naar actiepunten." },
-      { name: "SPSS & Tableau", description: "Ervaring met data-analyse en visualisatie vanuit studiecontext." }
+      { name: "Google Analytics 4 (GA4)", description: "Basisvaardigheden in het lezen van rapportages, gebruikersgedrag, events en conversies. Begrijpen hoe data gebruikt kan worden om marketingbeslissingen te onderbouwen." },
+      { name: "Google Ads Measurement (basis)", description: "Inzicht in conversiemeting en de relatie tussen Google Ads en Analytics (theorie en certificering)." },
+      { name: "Excel & data-analyse", description: "Basisanalyse, tabellen, filters en rapportages. Data kunnen vertalen naar inzichten." },
+      { name: "SPSS & Tableau (studiecontext)", description: "Ervaring met data-analyse en visualisatie binnen onderzoeks- en studieopdrachten." }
     ]
   },
   {
@@ -65,8 +62,8 @@ const skillCategories = [
       dot: "bg-success"
     },
     skills: [
-      { name: "Google Marketing Platform", description: "Google Ads, GA4, Tag Manager, Looker Studio (basis)." },
-      { name: "Meta Business Manager", description: "Ads Manager, Pixel, catalogi (basiskennis & praktijkervaring)." },
+      { name: "Google Marketing Platform", description: "Google Ads en GA4." },
+      { name: "Meta Business Manager (basis)", description: "Kennismaking met Ads Manager en campagne-structuur." },
       { name: "HubSpot", description: "Inbound marketing, contentstrategie en lead nurturing (gecertificeerd)." },
       { name: "Mailchimp", description: "E-mailcampagnes en basis automation." },
       { name: "Visual Studio Code (basis)", description: "HTML/CSS lezen en kleine aanpassingen begrijpen voor tracking & CRO." }
