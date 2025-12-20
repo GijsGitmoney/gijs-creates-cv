@@ -13,9 +13,10 @@ const skillCategories = [
       dot: "bg-primary"
     },
     skills: [
-      { name: "Google Ads (Search & Display – basis)", description: "Opzetten en analyseren van campagnes binnen Google Ads. Inzicht in zoekintentie, keywords, advertentieteksten, biedstrategieën (o.a. Smart Bidding) en basisoptimalisaties." },
+      { name: "Google Ads (Search & Display)", description: "Opzetten en analyseren van campagnes binnen Google Ads. Inzicht in zoekintentie, keywords, advertentieteksten, biedstrategieën (o.a. Smart Bidding) en basisoptimalisaties." },
       { name: "Meta Advertising (Facebook & Instagram – basis)", description: "Kennismaking met het opzetten van campagnes binnen Meta Ads Manager. Basiskennis van doelstellingen, creatives, targeting en campagne-structuur. Ervaring vooral op leer- en testniveau." },
-      { name: "Performance marketing mindset", description: "Denken vanuit doelen en data: begrijpen hoe advertenties bijdragen aan zichtbaarheid, verkeer en conversies, en hoe resultaten geïnterpreteerd kunnen worden." }
+      { name: "Performance marketing mindset", description: "Denken vanuit doelen en data: begrijpen hoe advertenties bijdragen aan zichtbaarheid, verkeer en conversies, en hoe resultaten geïnterpreteerd kunnen worden." },
+      { name: "Basis SEO & zoekgedrag", description: "Inzicht in zoekwoorden, zoekintentie en de rol van SEO binnen het bredere marketinglandschap." }
     ]
   },
   {
@@ -46,7 +47,7 @@ const skillCategories = [
     },
     skills: [
       { name: "Google Analytics 4 (GA4)", description: "Basisvaardigheden in het lezen van rapportages, gebruikersgedrag, events en conversies. Begrijpen hoe data gebruikt kan worden om marketingbeslissingen te onderbouwen." },
-      { name: "Google Ads Measurement (basis)", description: "Inzicht in conversiemeting en de relatie tussen Google Ads en Analytics (theorie en certificering)." },
+      { name: "Google Ads Measurement", description: "Inzicht in conversiemeting en de relatie tussen Google Ads en Analytics (theorie en certificering)." },
       { name: "Excel & data-analyse", description: "Basisanalyse, tabellen, filters en rapportages. Data kunnen vertalen naar inzichten." },
       { name: "SPSS & Tableau (studiecontext)", description: "Ervaring met data-analyse en visualisatie binnen onderzoeks- en studieopdrachten." }
     ]
