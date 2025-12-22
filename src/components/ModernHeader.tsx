@@ -36,14 +36,14 @@ const ModernHeader = () => {
         
         {/* Contact Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-12 animate-fade-in px-2" style={{ animationDelay: '0.4s' }}>
-          <div className="group relative">
+          <a href="mailto:casilgijs@gmail.com" className="group relative block">
             <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
             <div className="relative bg-gradient-card backdrop-blur-xl border border-border/50 rounded-xl md:rounded-2xl p-3 md:p-4 hover:scale-105 transition-all duration-300">
               <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary mb-1 md:mb-2" />
               <p className="text-xs md:text-sm text-muted-foreground">Email</p>
               <p className="text-xs md:text-sm font-medium break-all">casilgijs@gmail.com</p>
             </div>
-          </div>
+          </a>
           
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-primary rounded-xl md:rounded-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 blur-sm"></div>
