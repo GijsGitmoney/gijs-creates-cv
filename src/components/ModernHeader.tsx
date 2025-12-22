@@ -85,7 +85,7 @@ const ModernHeader = () => {
             className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto"
             asChild
           >
-            <a href="/Gijs_Hamburger_Curriculum_Vitae_2025.pdf" download>
+            <a href="/Gijs_Hamburger_Curriculum_Vitae_2025-2.pdf" download>
               <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
               Download CV
             </a>
