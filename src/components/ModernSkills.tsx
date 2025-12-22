@@ -13,10 +13,10 @@ const skillCategories = [
       dot: "bg-primary"
     },
     skills: [
-      { name: "Google Ads (Search & Display)", description: "Opzetten en analyseren van campagnes binnen Google Ads. Inzicht in zoekintentie, keywords, advertentieteksten, biedstrategieën (o.a. Smart Bidding) en basisoptimalisaties." },
-      { name: "Meta Advertising (Facebook & Instagram – basis)", description: "Kennismaking met het opzetten van campagnes binnen Meta Ads Manager. Basiskennis van doelstellingen, creatives, targeting en campagne-structuur. Ervaring vooral op leer- en testniveau." },
-      { name: "Performance marketing mindset", description: "Denken vanuit doelen en data: begrijpen hoe advertenties bijdragen aan zichtbaarheid, verkeer en conversies, en hoe resultaten geïnterpreteerd kunnen worden." },
-      { name: "Basis SEO & zoekgedrag", description: "Inzicht in zoekwoorden, zoekintentie en de rol van SEO binnen het bredere marketinglandschap." }
+      "Google Ads (Search & Display)",
+      "Meta Advertising (Facebook & Instagram – basis)",
+      "Performance marketing mindset",
+      "Basis SEO & zoekgedrag"
     ]
   },
   {
@@ -30,9 +30,9 @@ const skillCategories = [
       dot: "bg-accent"
     },
     skills: [
-      { name: "Canva (ads & social creatives)", description: "Ontwerpen en aanpassen van advertentievisuals voor Meta & Display." },
-      { name: "Photoshop (basis)", description: "Bewerken en optimaliseren van visuals voor online campagnes." },
-      { name: "UX / landingspagina-denken", description: "Basisinzicht in conversie, hiërarchie en gebruiksvriendelijkheid (CRO-minded)." }
+      "Canva",
+      "Photoshop",
+      "UX / UI landingspagina ontwerpen"
     ]
   },
   {
@@ -46,10 +46,10 @@ const skillCategories = [
       dot: "bg-accent"
     },
     skills: [
-      { name: "Google Analytics 4 (GA4)", description: "Basisvaardigheden in het lezen van rapportages, gebruikersgedrag, events en conversies. Begrijpen hoe data gebruikt kan worden om marketingbeslissingen te onderbouwen." },
-      { name: "Google Ads Measurement", description: "Inzicht in conversiemeting en de relatie tussen Google Ads en Analytics (theorie en certificering)." },
-      { name: "Excel & data-analyse", description: "Basisanalyse, tabellen, filters en rapportages. Data kunnen vertalen naar inzichten." },
-      { name: "SPSS & Tableau (studiecontext)", description: "Ervaring met data-analyse en visualisatie binnen onderzoeks- en studieopdrachten." }
+      "Google Analytics 4 (GA4)",
+      "Google Ads Measurement",
+      "Excel & data-analyse",
+      "SPSS & Tableau"
     ]
   },
   {
@@ -63,11 +63,11 @@ const skillCategories = [
       dot: "bg-success"
     },
     skills: [
-      { name: "Google Marketing Platform", description: "Google Ads en GA4." },
-      { name: "Meta Business Manager (basis)", description: "Kennismaking met Ads Manager en campagne-structuur." },
-      { name: "HubSpot", description: "Inbound marketing, contentstrategie en lead nurturing (gecertificeerd)." },
-      { name: "Mailchimp", description: "E-mailcampagnes en basis automation." },
-      { name: "Visual Studio Code (basis)", description: "HTML/CSS lezen en kleine aanpassingen begrijpen voor tracking & CRO." }
+      "Google Marketing Platform",
+      "Meta Business Manager",
+      "Coosto",
+      "Mailchimp",
+      "Visual Studio Code"
     ]
   }
 ];
@@ -109,20 +109,13 @@ const ModernSkills = () => {
                 </div>
               </div>
               
-              <div className="space-y-3 md:space-y-4">
+              <div className="space-y-2 md:space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="group">
-                    <div className="flex items-start gap-2 md:gap-3">
-                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${category.colorClasses.dot} shadow-glow flex-shrink-0 mt-2`}></div>
-                      <div>
-                        <span className="text-sm md:text-base text-foreground font-medium group-hover:text-primary transition-colors">
-                          {skill.name}
-                        </span>
-                        <p className="text-xs md:text-sm text-muted-foreground mt-0.5 leading-relaxed">
-                          {skill.description}
-                        </p>
-                      </div>
-                    </div>
+                  <div key={skillIndex} className="group flex items-center gap-2 md:gap-3">
+                    <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${category.colorClasses.dot} shadow-glow flex-shrink-0`}></div>
+                    <span className="text-sm md:text-base text-foreground font-medium group-hover:text-primary transition-colors">
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
