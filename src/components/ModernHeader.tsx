@@ -78,27 +78,16 @@ const ModernHeader = () => {
           </a>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
+        <div className="flex justify-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto"
+            className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base"
             asChild
           >
             <a href="/Gijs_Hamburger_Curriculum_Vitae_2026.pdf" download>
               <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
               Download CV
-            </a>
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="border-primary/50 hover:bg-primary/10 font-semibold px-6 md:px-8 py-3 rounded-xl md:rounded-2xl text-sm md:text-base w-full sm:w-auto"
-            asChild
-          >
-            <a href="/Motivatiebrief_Breinstein_GijsH.docx" download>
-              <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Motivatiebrief
             </a>
           </Button>
         </div>
