@@ -26,7 +26,7 @@ const CallToAction = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-2xl shadow-glow group"
               asChild
             >
-              <a href="mailto:casilgijs@gmail.com">
+              <a href="mailto:gijsqh@outlook.com">
                 <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Start een gesprek
               </a>
@@ -63,7 +63,7 @@ const CallToAction = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="text-center">
                 <p className="text-muted-foreground">Email</p>
-                <p className="font-medium text-foreground">casilgijs@gmail.com</p>
+                <p className="font-medium text-foreground">gijsqh@outlook.com</p>
               </div>
               <div className="text-center">
                 <p className="text-muted-foreground">Telefoon</p>
