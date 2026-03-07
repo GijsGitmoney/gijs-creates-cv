@@ -1,4 +1,4 @@
-import { Heart, Dumbbell, Plane, Mountain, Book, Users, Target, CheckCircle } from "lucide-react";
+import { Dumbbell, Plane, Mountain, Book, Users, CheckCircle } from "lucide-react";
 import CVCard from "./CVCard";
 
 const hobbies = [
@@ -43,8 +43,8 @@ const traits = [
 const PersonalSection = () => {
   return (
     <section className="animate-fade-in">
-      <div className="text-center mb-8 md:mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-3 md:mb-4">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-3">
           Persoonlijk & Hobby's
         </h2>
         <p className="text-base md:text-lg text-muted-foreground">Wat mij drijft buiten werk</p>
@@ -53,36 +53,28 @@ const PersonalSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
         {/* Hobbies */}
         <CVCard>
-          <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-lg md:rounded-xl flex items-center justify-center shadow-glow flex-shrink-0">
-              <Heart className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-            </div>
-            <div className="min-w-0">
-              <h3 className="text-lg md:text-xl font-heading font-bold text-foreground">
-                Hobby's & Interesses
-              </h3>
-              <div className="h-1 w-14 md:w-16 bg-primary rounded-full mt-1"></div>
-            </div>
+          <div className="mb-5">
+            <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">
+              Hobby's & Interesses
+            </h3>
+            <div className="h-0.5 w-12 bg-accent rounded-full"></div>
           </div>
           
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-3">
             {hobbies.map((hobby, index) => {
               const Icon = hobby.icon;
               return (
-                <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-primary rounded-lg md:rounded-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-sm -z-10"></div>
-                  <div className="relative flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-muted/40 backdrop-blur-sm rounded-lg md:rounded-xl border border-border/30 hover:border-primary/50 transition-all duration-300">
-                    <div className="w-8 h-8 md:w-10 md:h-10 bg-primary/20 text-primary rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors border border-primary/30">
-                      <Icon className="w-4 h-4 md:w-5 md:h-5" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-sm md:text-base font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
-                        {hobby.title}
-                      </h4>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                        {hobby.description}
-                      </p>
-                    </div>
+                <div key={index} className="flex items-start gap-3 p-3 bg-secondary/50 rounded-md border border-border hover:border-accent/30 transition-colors">
+                  <div className="w-8 h-8 bg-secondary text-foreground rounded-md flex items-center justify-center flex-shrink-0 border border-border">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm font-semibold text-foreground mb-0.5">
+                      {hobby.title}
+                    </h4>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                      {hobby.description}
+                    </p>
                   </div>
                 </div>
               );
@@ -92,26 +84,21 @@ const PersonalSection = () => {
         
         {/* Personality Traits */}
         <CVCard>
-          <div className="flex items-center gap-3 md:gap-4 mb-5 md:mb-6">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-lg md:rounded-xl flex items-center justify-center shadow-glow flex-shrink-0">
-              <Target className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-            </div>
-            <div className="min-w-0">
-              <h3 className="text-lg md:text-xl font-heading font-bold text-foreground">
-                Persoonlijke Eigenschappen
-              </h3>
-              <div className="h-1 w-14 md:w-16 bg-secondary rounded-full mt-1"></div>
-            </div>
+          <div className="mb-5">
+            <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">
+              Persoonlijke Eigenschappen
+            </h3>
+            <div className="h-0.5 w-12 bg-accent rounded-full"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             {traits.map((trait, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 bg-success/20 rounded-lg border border-success/30 hover:bg-success/25 transition-colors group"
+                className="flex items-center gap-2.5 p-3 bg-secondary/50 rounded-md border border-border"
               >
-                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-success flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-sm md:text-base text-foreground font-medium">{trait}</span>
+                <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
+                <span className="text-sm text-foreground font-medium">{trait}</span>
               </div>
             ))}
           </div>

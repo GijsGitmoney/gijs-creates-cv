@@ -1,75 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Dark Modern Theme - Base Colors */
-    --background: 220 15% 8%;
-    --foreground: 210 20% 95%;
-    --card: 220 12% 12%;
-    --card-foreground: 210 20% 95%;
-    --card-hover: 220 12% 14%;
-    --popover: 220 12% 12%;
-    --popover-foreground: 210 20% 95%;
+    /* Professional Neutral Theme */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --card-hover: 220 10% 97%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
     
-    /* Primary - Neon Blue */
-    --primary: 195 100% 65%;
-    --primary-foreground: 220 15% 8%;
-    --primary-glow: 195 100% 75%;
-    --primary-variant: 200 85% 55%;
+    /* Primary - Deep Slate */
+    --primary: 220 15% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 15% 25%;
+    --primary-variant: 220 12% 20%;
     
-    /* Secondary - Deep Blue */
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 210 20% 95%;
+    /* Secondary - Warm Gray */
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 220 15% 25%;
     
-    /* Accent - Electric Purple */
-    --accent: 270 100% 70%;
-    --accent-foreground: 220 15% 8%;
-    --accent-glow: 270 100% 80%;
+    /* Accent - Sage Green */
+    --accent: 160 30% 40%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 160 30% 50%;
     
-    /* Success - Turquoise */
-    --success: 180 100% 50%;
-    --success-foreground: 220 15% 8%;
+    /* Success - Sage */
+    --success: 160 25% 45%;
+    --success-foreground: 0 0% 98%;
     
     /* Muted Colors */
-    --muted: 220 15% 15%;
-    --muted-foreground: 210 10% 65%;
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 45%;
     
     /* Borders and Inputs */
-    --border: 220 20% 20%;
-    --border-accent: 195 100% 65%;
-    --input: 220 15% 15%;
-    --ring: 195 100% 65%;
+    --border: 220 10% 88%;
+    --border-accent: 160 30% 40%;
+    --input: 220 10% 94%;
+    --ring: 220 15% 15%;
     
     /* System Colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive-foreground: 0 0% 98%;
     --warning: 38 92% 50%;
     --info: 199 89% 48%;
     
     /* Design System */
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    /* Advanced Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-glass: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(128, 0, 255, 0.05));
-    --gradient-border: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-text: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
-    
-    /* Advanced Shadows */
-    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.4);
-    --shadow-glow: 0 0 40px rgba(0, 255, 255, 0.3);
-    --shadow-accent: 0 0 30px rgba(128, 0, 255, 0.25);
-    --shadow-inner: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Refined Shadows */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-accent: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-inner: inset 0 1px 2px rgba(0, 0, 0, 0.04);
     
     /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-smooth: all 0.2s ease;
+    --transition-spring: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -80,68 +72,35 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
     min-height: 100vh;
   }
   
-  /* Custom Scrollbar */
+  /* Subtle Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-muted;
+    @apply bg-transparent;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary rounded-full;
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    @apply bg-border rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply opacity-80;
+    background: hsl(var(--muted-foreground));
   }
 }
 
 @layer components {
-  /* Gradient Text Effect */
+  /* Gradient Text - now subtle */
   .gradient-text {
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: hsl(var(--foreground));
   }
   
-  /* Glass Effect */
+  /* Glass Effect - now clean white */
   .glass-effect {
-    background: var(--gradient-glass);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Neon Glow Effect */
-  .neon-glow {
-    box-shadow: var(--shadow-glow);
-    border: 1px solid hsl(var(--primary) / 0.5);
-  }
-  
-  /* Floating Animation */
-  .floating {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  /* Pulse Glow */
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
-  }
-  
-  @keyframes pulse-glow {
-    from { box-shadow: var(--shadow-glow); }
-    to { box-shadow: 0 0 60px rgba(0, 255, 255, 0.5); }
+    background: hsl(var(--card));
   }
 }
