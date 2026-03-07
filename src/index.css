@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,6 +42,13 @@
     --border-accent: 160 30% 40%;
     --input: 220 10% 94%;
     --ring: 220 15% 15%;
+    
+    /* Header Dark Theme */
+    --header-bg: 222 20% 12%;
+    --header-card: 0 0% 100% / 0.05;
+    --header-border: 0 0% 100% / 0.1;
+    --header-text: 220 15% 85%;
+    --header-text-muted: 220 10% 55%;
     
     /* System Colors */
     --destructive: 0 84% 60%;
@@ -94,12 +101,10 @@
 }
 
 @layer components {
-  /* Gradient Text - now subtle */
   .gradient-text {
     color: hsl(var(--foreground));
   }
   
-  /* Glass Effect - now clean white */
   .glass-effect {
     background: hsl(var(--card));
   }
