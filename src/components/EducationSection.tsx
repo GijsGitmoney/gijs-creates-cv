@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 import CVCard from "./CVCard";
 
 const education = [
@@ -34,50 +34,50 @@ const education = [
 const EducationSection = () => {
   return (
     <section className="animate-fade-in">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-heading font-bold gradient-text mb-4">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-3">
           Opleidingen & Certificeringen
         </h2>
-        <p className="text-lg text-muted-foreground">Mijn educatieve foundation</p>
+        <p className="text-base md:text-lg text-muted-foreground">Mijn educatieve foundation</p>
       </div>
       
       <div className="space-y-6">
         {education.map((edu, index) => (
-          <CVCard key={index} className="group hover:scale-[1.01] transition-all duration-500">
+          <CVCard key={index}>
             <div className="flex flex-col lg:flex-row gap-6">
-              {/* Left side - Icon & Level */}
+              {/* Left side */}
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow mb-4">
-                  <GraduationCap className="w-8 h-8 text-primary-foreground" />
+                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center border border-border mb-3">
+                  <GraduationCap className="w-6 h-6 text-foreground" />
                 </div>
-                <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-bold">
+                <span className="px-3 py-1 bg-primary text-primary-foreground rounded-md text-xs font-medium">
                   {edu.level}
                 </span>
               </div>
               
               {/* Main Content */}
               <div className="flex-1">
-                <div className="mb-4">
-                  <h3 className="text-xl font-heading font-bold text-foreground mb-1">
+                <div className="mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">
                     {edu.title}
                   </h3>
-                  <p className="text-lg font-semibold text-primary">
+                  <p className="text-base font-medium text-accent">
                     {edu.institution}
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                <div className="flex flex-wrap gap-4 text-muted-foreground mb-3 text-sm">
+                  <div className="flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5" />
                     <span>{edu.period}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5" />
                     <span>{edu.location}</span>
                   </div>
                 </div>
                 
-                <p className="text-foreground leading-relaxed mb-4">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
                   {edu.description}
                 </p>
                 
@@ -85,17 +85,12 @@ const EducationSection = () => {
                   {edu.highlights.map((highlight, highlightIndex) => (
                     <span 
                       key={highlightIndex}
-                      className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30"
+                      className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium border border-border"
                     >
                       {highlight}
                     </span>
                   ))}
                 </div>
-              </div>
-              
-              {/* Right side - Achievement icon */}
-              <div className="flex-shrink-0 hidden lg:flex items-start">
-                <Award className="w-6 h-6 text-success group-hover:text-primary transition-colors" />
               </div>
             </div>
           </CVCard>

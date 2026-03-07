@@ -38,75 +38,71 @@ const experiences = [
 const ExperienceTimeline = () => {
   return (
     <section className="animate-fade-in">
-      <div className="text-center mb-8 md:mb-12 px-4 md:px-0">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-3 md:mb-4">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl md:text-4xl font-heading text-foreground mb-3">
           Ervaring & Ondernemerschap
         </h2>
-        <p className="text-base md:text-lg text-muted-foreground">Van stage tot startup - mijn professionele journey</p>
+        <p className="text-base md:text-lg text-muted-foreground">Van stage tot startup — mijn professionele journey</p>
       </div>
       
       <div className="relative">
         {/* Timeline Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full"></div>
+        <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-px h-full bg-border"></div>
         
-        <div className="space-y-8 md:space-y-12">
+        <div className="space-y-10 md:space-y-14">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             const isLeft = index % 2 === 0;
             
             return (
-              <div key={index} className={`flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'} relative`}>
+              <div key={index} className={`flex items-start ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} relative`}>
                 {/* Timeline Node */}
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 z-10">
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-glow ${
-                    exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-primary'
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${
+                    exp.highlight ? 'bg-accent border-accent text-accent-foreground' : 'bg-card border-border text-muted-foreground'
                   }`}>
-                    <Icon className="w-8 h-8 text-primary-foreground" />
+                    <Icon className="w-4 h-4" />
                   </div>
                 </div>
                 
+                {/* Mobile Node */}
+                <div className="md:hidden absolute left-4 transform -translate-x-1/2 z-10">
+                  <div className={`w-3 h-3 rounded-full ${exp.highlight ? 'bg-accent' : 'bg-border'}`}></div>
+                </div>
+                
                 {/* Content Card */}
-                <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <CVCard className={exp.highlight ? 'border-primary/50' : ''}>
-                    {/* Mobile Icon */}
-                    <div className="md:hidden mb-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center shadow-glow ${
-                        exp.highlight ? 'bg-gradient-primary' : 'bg-gradient-primary'
-                      }`}>
-                        <Icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    </div>
-                    
+                <div className={`w-full md:w-5/12 pl-10 md:pl-0 ${isLeft ? 'md:pr-12' : 'md:pl-12'}`}>
+                  <CVCard className={exp.highlight ? 'border-accent/30' : ''}>
                     <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2 gap-2">
-                        <h3 className="text-lg md:text-xl font-heading font-bold text-foreground">
+                      <div className="flex items-center justify-between mb-1 gap-2">
+                        <h3 className="text-lg md:text-xl font-semibold text-foreground">
                           {exp.title}
                         </h3>
                         {exp.highlight && (
-                          <span className="px-2 md:px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs md:text-sm font-medium whitespace-nowrap">
+                          <span className="px-2.5 py-0.5 bg-accent/10 text-accent rounded-md text-xs font-medium">
                             Startup
                           </span>
                         )}
                       </div>
-                      <p className="text-base md:text-lg font-semibold text-primary mb-3">
+                      <p className="text-base md:text-lg font-medium text-accent">
                         {exp.company}
                       </p>
                     </div>
                     
-                    <div className="flex flex-wrap gap-3 md:gap-4 text-muted-foreground mb-4">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 flex-shrink-0" />
-                        <span className="text-xs md:text-sm">{exp.period}</span>
+                    <div className="flex flex-wrap gap-3 text-muted-foreground mb-4 text-sm">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        <span>{exp.period}</span>
                       </div>
                       {exp.location && (
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 flex-shrink-0" />
-                          <span className="text-xs md:text-sm">{exp.location}</span>
+                        <div className="flex items-center gap-1.5">
+                          <MapPin className="w-3.5 h-3.5" />
+                          <span>{exp.location}</span>
                         </div>
                       )}
                     </div>
                     
-                    <p className="text-sm md:text-base text-foreground leading-relaxed mb-4">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
                       {exp.description}
                     </p>
                     
@@ -114,7 +110,7 @@ const ExperienceTimeline = () => {
                       {exp.skills.map((skill, skillIndex) => (
                         <span 
                           key={skillIndex}
-                          className="px-2 md:px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs md:text-sm font-medium"
+                          className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-xs font-medium border border-border"
                         >
                           {skill}
                         </span>
@@ -123,7 +119,7 @@ const ExperienceTimeline = () => {
                   </CVCard>
                 </div>
                 
-                {/* Spacer - Hidden on mobile */}
+                {/* Spacer */}
                 <div className="hidden md:block w-5/12"></div>
               </div>
             );
