@@ -11,11 +11,18 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <ModernHeader />
       
+      {/* Dark section: Profile through Skills */}
+      <div className="dark-section bg-[#1A1F2C]">
+        <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 space-y-16 md:space-y-28">
+          <PersonalProfile />
+          <ExperienceTimeline />
+          <ModernSkills />
+          <EducationSection />
+        </div>
+      </div>
+      
+      {/* Light section: Personal & CTA */}
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-20 space-y-16 md:space-y-28">
-        <PersonalProfile />
-        <ExperienceTimeline />
-        <ModernSkills />
-        <EducationSection />
         <PersonalSection />
         <CallToAction />
       </main>
