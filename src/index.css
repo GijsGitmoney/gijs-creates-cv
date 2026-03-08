@@ -108,4 +108,23 @@
   .glass-effect {
     background: hsl(var(--card));
   }
+
+  /* Dark section override */
+  .dark-section {
+    --background: 222 20% 12%;
+    --foreground: 220 15% 85%;
+    --card: 0 0% 100% / 0.05;
+    --card-foreground: 220 15% 85%;
+    --card-hover: 0 0% 100% / 0.08;
+    --border: 0 0% 100% / 0.1;
+    --border-accent: 160 30% 50%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 55%;
+    --secondary: 0 0% 100% / 0.08;
+    --secondary-foreground: 220 15% 80%;
+    --accent: 160 30% 50%;
+    --accent-foreground: 0 0% 98%;
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
 }
